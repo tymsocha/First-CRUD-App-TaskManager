@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@NamedQuery(name = "Task.getTaskByItsId", query = "FROM Task WHERE id = :ID")
+//@NamedQuery(name = "Task.findTaskById", query = "FROM Task WHERE id = :ID")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
