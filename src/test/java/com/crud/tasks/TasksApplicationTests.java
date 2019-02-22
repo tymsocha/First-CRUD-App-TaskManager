@@ -31,7 +31,7 @@ public class TasksApplicationTests {
 		Assert.assertEquals("I want to break free", content);
 	}
 
-	/*@Test
+	@Test
 	public void testDbService() {
 		//Given
 		DbService dbService = new DbService();
@@ -42,7 +42,7 @@ public class TasksApplicationTests {
 		//Then
 		Assert.assertEquals(title, testTask.getTitle());
 		Assert.assertEquals(content, testTask.getContent());
-	}*/
+	}
 
 }
 

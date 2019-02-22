@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-//@NamedQuery(name = "Task.findTaskById", query = "FROM Task WHERE id = :ID")
+@NamedQuery(name = "Task.findTaskById", query = "FROM Task WHERE id = :ID")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "tasks")
+@Entity
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
