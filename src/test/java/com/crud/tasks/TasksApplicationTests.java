@@ -17,7 +17,7 @@ public class TasksApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
+	/*@Test
 	public void testLombok() {
 		//Given
 		TaskDto taskDto = new TaskDto((long) 1, "Test Lombok", "I want to break free");
@@ -42,7 +42,7 @@ public class TasksApplicationTests {
 		//Then
 		Assert.assertEquals(title, testTask.getTitle());
 		Assert.assertEquals(content, testTask.getContent());
-	}
+	}*/
 
 }
 
