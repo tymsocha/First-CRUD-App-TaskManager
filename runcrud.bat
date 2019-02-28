@@ -5,8 +5,8 @@ echo GRADLEW BUILD has errors - breaking work
 goto fail
 
 :rename
-del build\libs\crud.war
-ren build\libs\tasks-0.0.1-SNAPSHOT.war crud.war
+del E:\Dokumenty\Kodilla\Kodilla-Projects\tasks\build\libs\crud.war
+ren E:\Dokumenty\Kodilla\Kodilla-Projects\tasks\build\libs\tasks-0.0.1-SNAPSHOT.war crud.war
 if "%ERRORLEVEL%" == "0" goto stoptomcat
 echo Cannot Rename file
 goto fail
@@ -15,7 +15,7 @@ goto fail
 call %CATALINA_HOME%\bin\shutdown.bat
 
 :copyfile
-copy build\libs\crud.war %CATALINA_HOME%\webapps
+copy E:\Dokumenty\Kodilla\Kodilla-Projects\tasks\build\libs\crud.war %CATALINA_HOME%\webapps
 if "%ERRORLEVEL%" == "0" goto runtomcat
 echo Cannot Rename file
 goto fail
@@ -25,7 +25,7 @@ call %CATALINA_HOME%\bin\startup.bat
 goto end
 
 :fail
-cho.
+echo.
 echo There were errors
 
 :end
