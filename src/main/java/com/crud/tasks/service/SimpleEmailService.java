@@ -17,13 +17,13 @@ public class SimpleEmailService {
     private static final Logger LOGGER = LoggerFactory.getLogger(SimpleMailMessage.class);
 
      public void send(final Mail mail) {
-         LOGGER.info("Starting e-mail preparation...");
+         /*LOGGER.info("Starting e-mail preparation...");
          try {
              javaMailSender.send(createMailMessage(mail));
              LOGGER.info("Email has been sent");
          } catch (MailException e) {
              LOGGER.error("Failed to process email sending: " + e.getMessage() + e);
-         }
+         }*/
      }
 
     private SimpleMailMessage createMailMessage(Mail mail) {
