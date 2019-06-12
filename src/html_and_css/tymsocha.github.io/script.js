@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'whispering-plains-31624.herokuapp.com/v1/task/';
-  const trelloApiRoot = 'whispering-plains-31624.herokuapp.com/v1/trello/';
+  const apiRoot = 'https://whispering-plains-31624.herokuapp.com/v1/task/';
+  const trelloApiRoot = 'https://whispering-plains-31624.herokuapp.com/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
