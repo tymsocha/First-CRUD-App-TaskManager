@@ -20,10 +20,10 @@ public class EmailScheduler {
     @Autowired
     private AdminConfig adminConfig;
 
-    //@Scheduled(fixedDelay = 10000)
+    @Scheduled(fixedDelay = 10000)
     public void sendInformationEmail() {
         long size = taskRepository.count();
-        simpleEmailService.send(new Mail(
+        simpleEmailService.sendScheduledEmail(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
                 "Currently in database you got: " + size + checkIfOneOrMoreTasks(size),
@@ -32,7 +32,7 @@ public class EmailScheduler {
     }
 
     private String checkIfOneOrMoreTasks(long size) {
-        if (size == 1) return "task";
-        else return "tasks";
+        if (size == 1) return " task";
+        else return " tasks";
     }
 }
