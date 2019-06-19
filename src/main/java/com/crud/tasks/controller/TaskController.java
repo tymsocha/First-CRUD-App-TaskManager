@@ -23,27 +23,27 @@ public class TaskController {
     @Autowired
     private TaskFacade taskFacade;
 
-    @RequestMapping(method = RequestMethod.GET, value = "getTasks")
+    @GetMapping(value = "tasks")
     public List<TaskDto> getTasks() {
         return taskFacade.fetchTaskList();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "getTask")
-    public TaskDto getTask(@RequestParam Long taskId) throws TaskNotFoundException {
+    @GetMapping(value = "tasks/{taskId}")
+    public TaskDto getTask(@PathVariable Long taskId) throws TaskNotFoundException {
         return taskFacade.fetchTask(taskId);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
-    public void deleteTask(@RequestParam Long taskId) throws TaskNotFoundException {
+    @DeleteMapping(value = "tasks/{taskId}")
+    public void deleteTask(@PathVariable Long taskId) throws TaskNotFoundException {
         taskFacade.deleteTask(taskId);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
+    @PutMapping(value = "tasks")
     public TaskDto updateTask(@RequestBody TaskDto taskDto) {
         return taskFacade.updateTask(taskDto);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "createTask", consumes = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "tasks", consumes = APPLICATION_JSON_VALUE)
     public TaskDto createTask(@RequestBody TaskDto taskDto) {
         return taskFacade.createTask(taskDto);
     }

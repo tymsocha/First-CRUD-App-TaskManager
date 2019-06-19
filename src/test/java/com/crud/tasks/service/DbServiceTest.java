@@ -28,10 +28,10 @@ public class DbServiceTest {
     @Autowired
     private DbService dbService;
 
-    /*@Before
+    @Before
     public  void delete () {
         dbService.deleteAllTasks();
-    }*/
+    }
 
 
     @Test

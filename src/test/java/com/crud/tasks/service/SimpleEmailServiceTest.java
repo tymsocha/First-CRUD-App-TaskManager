@@ -30,7 +30,7 @@ public class SimpleEmailServiceTest {
         mailMessage.setSubject(mail.getSubject());
 
         //When
-        simpleEmailService.send(mail);
+        simpleEmailService.sendSimpleEmail(mail);
 
         //Then
         Mockito.verify(javaMailSender, Mockito.times(1)).send(mailMessage);
